@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="periodico.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/019efbf6bd.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+      <div id="cont">
+        <h1 id="titulo">ET 24</h1>
+        <div>
+            <img id="logo" src="24_escudo.png" alt="">
+        </div>
+      </div>  
+        
+    </header>
+    
+
+    <section>
+      <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">ET24</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="index.html">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Noticias </span>
+            </a>
+             <span class="tooltip">Noticias</span>
+          </li>
+          <li>
+           <a href="radio.html">
+             <i class='bx bx-user' ></i>
+             <span class="links_name">Radio</span>
+           </a>
+           <span class="tooltip">Radio</span>
+         </li>
+         <li>
+           <a href="esi.html">
+            <i class='bx bxs-analyse'></i>
+             <span class="links_name">ESI</span>
+           </a>
+           <span class="tooltip">ESI</span>
+         </li>
+         <li>
+          <a href="periodico.html">
+            <i class='bx bx-library' ></i>
+            <span class="links_name">Periodico</span>
+          </a>
+          <span class="tooltip">Periodico</span>
+        </li>
+         <li>
+          <a href="redes.html">
+            <i class='bx bx-chat' ></i>
+            <span class="links_name">Redes</span>
+          </a>
+          <span class="tooltip">Redes</span>
+        </li>
+      </div>
+      <br><br><br><br><br>
+      <h1 id="datagen">PERIODICO</h1>
+      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+      <div class="elfsight-app-81e4dfa9-87d5-494b-87f6-0bc18f8ad844"></div>
+      
+      <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+    
+      closeBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("open");
+        menuBtnChange();
+      });
+    
+      searchBtn.addEventListener("click", ()=>{ 
+        sidebar.classList.toggle("open");
+        menuBtnChange(); 
+      });
+    
+      function menuBtnChange() {
+       if(sidebar.classList.contains("open")){
+         closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+       }else {
+         closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+       }
+      }
+      </script>
+    </section>
+    
+    <div class="go-top-scroll">
+      <div class="go-top-button">
+        <i class="fa-solid fa-angle-up"></i>
+      </div>
+    </div>
+    
+    <footer>
+      <br><br>
+      <div id="foot"><img id="logofot" src="logo1.png"></div>
+      
+    </footer>
+    <script src="periodico.js"></script>
+</body>
+</html>
